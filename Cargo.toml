@@ -1,0 +1,25 @@
+[package]
+name = "bitcoin"
+version = "0.1.0"
+authors = [ "Michael Dunn <michaelsdunn1@gmail.com>" ]
+license = "MIT"
+homepage = "https://github.com/michaelsdunn1/bitcoin/"
+repository = "https://github.com/michaelsdunn1/bitcoin/"
+readme = "README.md"
+description = "A small bitcoin library in rust"
+keywords = ["bitcoin"]
+
+[dependencies]
+base16    = "0.1.1"
+base58    = "0.1.0"
+byteorder = "1.1.0"
+rand      = "0.5.5"
+ripemd160 = "0.7.0"
+serde     = "1.0"
+sha2      = "0.5.2"
+
+secp256k1 = { version = "0.11.0", features = ["serde", "rand"] }
+
+[lib]
+name = "bitcoin"
+path = "src/lib.rs"
